@@ -1,0 +1,16 @@
+{
+  "name": "qissa-coffee-house",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Qissa Coffee House full-stack application",
+  "scripts": {
+    "dev": "concurrently -k -n backend,frontend -c yellow,cyan \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "start": "npm start --prefix backend",
+    "seed:admin": "npm run seed:admin --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}\n
