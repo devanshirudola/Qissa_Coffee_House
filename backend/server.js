@@ -49,7 +49,7 @@ app.use(
   })
 );
 
-const allowedOrigins = new Set([process.env.CLIENT_URL, 'http://localhost:5173', 'http://127.0.0.1:5173'].filter(Boolean))
+const allowedOrigins = new Set([process.env.CLIENT_URL, 'http://localhost:5173', 'http://127.0.0.1:5173', 'https://qissa-coffee-house-ufjb.vercel.app'].filter(Boolean))
 // CORS configuration with stricter origin handling
 app.use(cors({
   origin: (origin, callback) => {

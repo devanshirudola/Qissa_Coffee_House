@@ -6,11 +6,7 @@ let io = null
 
 export function initSocket(httpServer) {
   // Trusted origins – same whitelist as HTTP CORS.
-  const allowedOrigins = new Set([
-    process.env.CLIENT_URL,
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-  ].filter(Boolean))
+  const allowedOrigins = new Set([process.env.CLIENT_URL, 'http://localhost:5173', 'http://127.0.0.1:5173', 'https://qissa-coffee-house-ufjb.vercel.app'].filter(Boolean))
 
   io = new Server(httpServer, {
     cors: {
